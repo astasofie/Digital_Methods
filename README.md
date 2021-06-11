@@ -18,7 +18,7 @@
 | Radikal Ungdom  | The Danish Social Liberal Youth | @radikanungdom | https://twitter.com/radikalungdom | 
 | Socialistisk Folkeparti (SF) | Socialist People’s Party | @SFpolitik | https://twitter.com/SFpolitik | 
 | Socialistisk Folkepartis Ungdom (SFU) | Popular Socialist Youth of Denmark | @SF_Ungdom | https://twitter.com/SF_Ungdom | 
-| Socialdemokratiet | Social democrats | @Spolitik | https://twitter.com/Spolitik | 
-| Dansk Socialdemokratisk Ungdom (DSU) | Social Demo| DSU_1920 | https://twitter.com/DSU_1920 | 
+| Socialdemokratiet | Social Democrats | @Spolitik | https://twitter.com/Spolitik | 
+| Dansk Socialdemokratisk Ungdom (DSU) | Social Democratic Youth| DSU_1920 | https://twitter.com/DSU_1920 | 
 | Venstre  | The Liberal Party of Denmark | @venstredk | https://twitter.com/venstredk | 
 | Venstres Ungdom  | Liberal Youth | @VUngdom | https://twitter.com/VUngdom | 
