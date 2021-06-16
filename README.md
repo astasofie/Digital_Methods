@@ -25,3 +25,13 @@
 | Dansk Socialdemokratisk Ungdom (DSU) | Social Democratic Youth| DSU_1920 | https://twitter.com/DSU_1920 | 
 | Venstre  | The Liberal Party of Denmark | @venstredk | https://twitter.com/venstredk | 
 | Venstres Ungdom  | Liberal Youth | @VUngdom | https://twitter.com/VUngdom | 
+
+| <img width="550" alt="Skærmbillede 2021-06-12 kl  10 13 20" src="https://user-images.githubusercontent.com/83070511/122263068-50de4800-ced6-11eb-893c-06e6362cef8d.png"> |
+|:---:| 
+| Graph 1: Directed follower network, Twitter |
+
+
+
+| <img width="550" alt="Skærmbillede 2021-06-12 kl  10 13 35" src="https://user-images.githubusercontent.com/83070511/122263504-cfd38080-ced6-11eb-8ba3-94ed60708dd1.png"> |
+|:---:| 
+| Graph 2: Directed follower network, Instagram |
