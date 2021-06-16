@@ -8,13 +8,15 @@
 | Alternativets Unge | Alternative Youth | @AlternativeUnge | https://twitter.com/AlternativeUnge | 
 | Dansk Folkeparti (DF) | Danish People’s Party | @DanskDf1995 | https://twitter.com/DanskDf1995 | 
 | Dansk Folkepartis Ungdom (DFU)  | Danish People's Party's Youth | @DFUngdom | https://twitter.com/DFUngdom | 
-| Det Konservative Folkeparti (Konservative) | The Conservatives| @KonservativeDK | https://twitter.com/KonservativeDK | 
-| Konservativ Ungdom (KU) | Conservative Youth | @KU_DK| https://twitter.com/KU_DK | 
 | Enhedslisten | The Danish Red-Green Alliance | @Enhedslisten | https://twitter.com/Enhedslisten | 
 | Rød-Grøn Ungdom | Red-Green Youth | @rgungdom | https://twitter.com/rgungdom | 
 | Socialistisk Ungdomsfront (SUF) | Socialist Youth Front| @sufnet | https://twitter.com/sufnet | 
+| Det Konservative Folkeparti (Konservative) | The Conservatives| @KonservativeDK | https://twitter.com/KonservativeDK | 
+| Konservativ Ungdom (KU) | Conservative Youth | @KU_DK| https://twitter.com/KU_DK | 
 | Liberal Alliance (LA)| Liberal Alliance | @LiberalAlliance | https://twitter.com/LiberalAlliance | 
 | Liberal Alliances Ungdom (LAU) | Liberal Youth | @LiberalUngdomDK | https://twitter.com/LiberalUngdomDK | 
+| Nye Borgerlige | The New Right | @NyeBorgerlige | https://twitter.com/NyeBorgerlige |
+| Unge Nye Borgerlige | Young The New Right | @UngeNB |https://twitter.com/ungenb |
 | Radikale Venstre  | Danish Social-Liberal Party | @radikale| https://twitter.com/radikale | 
 | Radikal Ungdom  | The Danish Social Liberal Youth | @radikanungdom | https://twitter.com/radikalungdom | 
 | Socialistisk Folkeparti (SF) | Socialist People’s Party | @SFpolitik | https://twitter.com/SFpolitik | 
