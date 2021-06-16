@@ -26,6 +26,10 @@
 | Venstre  | The Liberal Party of Denmark | @venstredk | https://twitter.com/venstredk | 
 | Venstres Ungdom  | Liberal Youth | @VUngdom | https://twitter.com/VUngdom | 
 
+| <img width="500" alt="Skærmbillede 2021-06-16 kl  19 49 28" src="https://user-images.githubusercontent.com/83070511/122268261-25f6f280-cedc-11eb-929c-76573c9d5bd5.png"> |
+|:---:|
+|**Figure 1:** [Instagram post by Radikal Ungdom](https://www.instagram.com/p/B9CkVWxBn1O/ "Instagram") illustrating CSI as a generational issue |
+
 | <img width="500" alt="Skærmbillede 2021-06-12 kl  10 13 20" src="https://user-images.githubusercontent.com/83070511/122263068-50de4800-ced6-11eb-893c-06e6362cef8d.png"> |
 |:---:| 
 | **Figure 2:** Directed follower network, Twitter |
@@ -36,8 +40,23 @@
 |:---:| 
 | **Figure 3:** Directed follower network, Instagram |
 
-
-| <img width="500" alt="Skærmbillede 2021-06-16 kl  19 49 28" src="https://user-images.githubusercontent.com/83070511/122268261-25f6f280-cedc-11eb-929c-76573c9d5bd5.png"> |
+| ![Figure5](https://user-images.githubusercontent.com/83070511/122304023-d11ba200-cf04-11eb-845b-32d77c3d498d.jpg) |
 |:---:|
-|**Figure 1:** [Instagram post by Radikal Ungdom](https://www.instagram.com/p/B9CkVWxBn1O/ "Instagram") illustrating CSI as a generational issue |
+| **Figure 5:** Number of topics for non-aggregated data |
+
+| ![Figure6](https://user-images.githubusercontent.com/83070511/122304376-674fc800-cf05-11eb-8af6-0cb2b1dbc272.jpg) |
+|:---:|
+| **Figure 6:** Testing models |
+
+| <img width="359" alt="Tabel 2" src="https://user-images.githubusercontent.com/83070511/122304872-391eb800-cf06-11eb-965f-9cfacf3376a0.png"> |
+|:---:|
+| **Table 2:** Tweet distribution |
+
+
+
+
+
+
+
+
 
