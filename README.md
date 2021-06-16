@@ -28,16 +28,16 @@
 
 | <img width="500" alt="Skærmbillede 2021-06-12 kl  10 13 20" src="https://user-images.githubusercontent.com/83070511/122263068-50de4800-ced6-11eb-893c-06e6362cef8d.png"> |
 |:---:| 
-| Graph 1: Directed follower network, Twitter |
+| **Graph 1:** Directed follower network, Twitter |
 
 
 
 | <img width="500" alt="Skærmbillede 2021-06-12 kl  10 13 35" src="https://user-images.githubusercontent.com/83070511/122263504-cfd38080-ced6-11eb-8ba3-94ed60708dd1.png"> |
 |:---:| 
-| Graph 2: Directed follower network, Instagram |
+| **Graph 2:** Directed follower network, Instagram |
 
 
 | <img width="500" alt="Skærmbillede 2021-06-16 kl  19 49 28" src="https://user-images.githubusercontent.com/83070511/122268261-25f6f280-cedc-11eb-929c-76573c9d5bd5.png"> |
 |:---:|
-| [Instagram post by Radikal Ungdom](https://www.instagram.com/p/B9CkVWxBn1O/ "Instagram") illustrating CSI as a generational issue |
+|**Figure 1:** [Instagram post by Radikal Ungdom](https://www.instagram.com/p/B9CkVWxBn1O/ "Instagram") illustrating CSI as a generational issue |
 
