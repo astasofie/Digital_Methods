@@ -40,6 +40,11 @@
 |:---:| 
 | **Figure 3:** Directed follower network, Instagram |
 
+| ![PCA](https://user-images.githubusercontent.com/83070511/122305761-a252fb00-cf07-11eb-8cd6-8e1989813926.png)|
+|:---:|
+| **Figure 4:** PCA plot |
+
+
 | ![Figure5](https://user-images.githubusercontent.com/83070511/122304023-d11ba200-cf04-11eb-845b-32d77c3d498d.jpg) |
 |:---:|
 | **Figure 5:** Number of topics for non-aggregated data |
