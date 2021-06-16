@@ -1,5 +1,7 @@
 # Digital_Methods
 
+# Table of Content
+https://github.com/astasofie/Digital_Methods/blob/main/README.md#1-introduction
 
 # 1. Introduction #
 
