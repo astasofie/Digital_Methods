@@ -1,6 +1,32 @@
 # Digital_Methods
 
 
+# 1. Introduction #
+
+Over the course of the last years, youth and climate have become closely associated concepts in the public and political conversation on climate change. School Strikes for Climate in over 150 countries has scrutinised the discourse of climate as a generational issue, where the society &quot;owes&quot; the young generation a socially just approach to climate change (Thew et al., 2020).
+
+In Denmark, this discourse of climate- and sustainability issues (hereafter CSI) as a generational issue manifested itself as Prime Minister, Mette Frederiksen, upon winning the election in June 2019, thanked the young generation for making this election the first ever climate-election (Frederiksen, 2020). This generational framing primes us to investigate how political youth- and mother parties engage in the conversation on CSI on social media.
+
+Guided by Kozinets&#39; (2019) writings on netnographically founded research, we formulate the scope of our study as follows: We are investigating how youth- and mother parties engage in the conversation on CSI on Twitter through posts and retweets to explore how they communicate their agendas on these issues in comparison. We do so by using both qualitative quantitative methods to explore patterns in a larger dataset of tweets posted by a defined list of youth- and mother parties, retrieved through the Twitter API.
+
+Specifically, we explore how the framing of CSI as a political issue of particular significance to the younger generation(s) is reflected in how youth- and mother parties engage in the conversation on CSI on Twitter. Formally, we ask the question:
+
+ ⋅⋅⋅ _How do political parties engage in the conversation on climate- and sustainability related issues on Twitter and can we observe differences across the_
+ ⋅⋅⋅_political spectrum and between mother- and youth parties?_
+
+# 2. Motivation #
+
+The conversations on and engagements with CSI are not only politically prevalent, but also a focus of contemporary research on social media using quali-quantitative methods. By combining quantitative computational methods and qualitative netnographic observations, Blok et al. (n.d.) investigate how green NGOs in three Scandinavian countries interrelate on social media platforms during the covid-19 pandemic, a period in which media coverage and the Danish government&#39;s actions concerning climate declined. Blok et. al (2021) employ a combination of principal component analysis and netnography to analyse how climate-active NGOs in three Scandinavian countries react to the covid-19 pandemic by examining their climate and corona-related tweets.
+
+To fathom the contemporary public and political debate, one cannot overlook the massive impact of social media networks and -platforms (Decuypere, 2020). The discussion of political issues has extended to a format that allows for direct communication between and with politicians, and while the digital infrastructure is largely owned by private companies and institutions, it offers the opportunity to repurpose the generated data for research purposes (Venturini et al., 2018; Edwards et al., 2013).
+
+A large-scaled international study by Reuters Institute and the University of Oxford from 2020 found significant differences in how people across age groups as well as the political spectrum use social media both generally and specifically related to climate (Newman et al., 2020). Generally, Generation Z (born 1996-2002) consume more news on Instagram, compared to any other platform. They further supersede all other generations in their use of the platform when consuming news about climate as they find value in getting the news directly from climate activists (Andini, 2020). The study further suggests that political affiliation factors into how individuals perceive climate change, with people on the left side of the spectrum being more anxious (Ibid.).
+
+Informed by the discrepancy in the use of platforms between generations, an aspect of our netnographic work is accordingly to examine how the youth parties present themselves on other platforms in comparison to their mother parties.
+
+
+
+
 **Table 1**
 |Party|English Translation|Twitter handle|Link|
 |---|---|---|---|
