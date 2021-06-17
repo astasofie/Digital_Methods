@@ -1,7 +1,43 @@
 # Digital_Methods
 
+# Table of content
 
-# 1. Introduction #
+- [1. Introduction - Joint](#1-introduction)
+- [2. Motivation - 5](#2-motivation)
+- [3. Method plan - 26](#3-method-plan)
+- [4. Netnography -25](#4-netnography)
+  * [Specifying our topic - 26](#specifying-our-topic)
+  * [Immersion Journal - 5](#immersion-journal)
+  * [Program of political principals - 25](#program-of-political-principals)
+  * [Twitter - 5](#twitter)
+  * [Facebook - 26](#facebook)
+  * [Instagram - 25](#instagram)
+  * [Key findings and shortcomings - 26](#key-findings-and-shortcomings)
+- [5. Network analysis - 25](#5-network-analysis)
+  * [Manual networks - 5](#manual-networks)
+  * [Automated retweet network - 5](#automated-retweet-network)
+  * [Analysis and key findings - 25](#analysis-and-key-findings)
+  * [Shortcomings - 26](#shortcomings)
+- [6. Content analysis - 25](#6-content-analysis)
+  * [Analysis and key findings - 5](#analysis-and-key-findings-1)
+  * [Shortcomings - 26](#shortcomings-1)
+- [7. ASDS II - LDA Topic Model](#7-asds-ii---lda-topic-model)
+  * [Twitter data - 28](#twitter-data)
+  * [Preprocessing for LDA - 4](#preprocessing-for-lda)
+  * [Number of topics - 28](#number-of-topics)
+  * [Analysis -3](#analysis)
+  * [Aggregated data- 28](#aggregated-data)
+  * [Alternative method -4](#alternative-method)
+- [8. Quali-quantitative integration across methods - Joint](#8-quali-quantitative-integration-across-methods)
+- [9. Conclusion - Joint](#9-conclusion)
+- [Literature](#literature)
+  * [Literature ASDS2](#literature-asds2)
+  * [Literature DM](#literature-dm)
+
+
+
+
+# 1. Introduction
 
 Over the course of the last years, youth and climate have become closely associated concepts in the public and political conversation on climate change. School Strikes for Climate in over 150 countries has scrutinised the discourse of climate as a generational issue, where the society &quot;owes&quot; the young generation a socially just approach to climate change (Thew et al., 2020).
 
@@ -271,12 +307,26 @@ For our study, we could employ the module SENTIDA, which consists of just about 
 
 There are technical challenges to automated sentiment analyses in smaller languages such as Danish. Firstly, SENTIDA requires lemmatisation, which is not unproblematic in the Danish language, as words tend to change in the process. For instance, in our experience, nej, meaning no, was lemmatised to neje, meaning curtsy. Furthermore, the use of negations to encourage agreement or to pose a question is simply accepted as a negation, and thus changes the sentiment of the entire sentence (Lauridsen et al., 2019). Accordingly, we deem that the LDA topic model would provide us with more useful insights and be a better approach to answering our research question. 
 
+# 8. Quali-quantitative integration across methods 
 
+We combine qualitative and quantitative perspectives to explore if and how youth- and mother parties engage in the conversation on CSI on Twitter, and whether this reveals a generational divide. Tasked with using digital Twitter data, we tap into a data source from one of the platforms contributing to the increasing availability of digital data (Moats, 2021). We thus position our study in the evolving field of social science research using digital methods and digital data (Marres & Gerlitz, 2016; Munk, 2019). 
+
+As described by Marres and Gerlitz (2016), both the digital tools we employ and the social media platforms that serve as the arena for our study are instruments constructed to serve a multitude of purposes and push several agendas. Marres and Gerlitz argue that recognising the multi-valent purposes of both digital tools and social media platforms enables researchers to experiment with the different methods; a methodological process they coin interface methods (Ibid.). When employing methods from Digital Methods and ASDS 2 to data from Twitter and other social media platforms, we work within the scope of interface methods. Consequently, we must conform to and consider the structures of the social media platforms, for example the limits on text length of tweets. 
+
+Our study combines qualitative and quantitative methods in what Munk calls a complementary approach (Munk 2019). Complementarity describes allowing qualitative and quantitative methods to perform their separate tasks and play on their different strengths, and then bringing them together to support and enrich each other (Ibid.). This approach has shown useful for grasping how CSI are communicated by youth- and mother parties in our study. An example of this being the analysis of our PCA, where we visualise our actor-term matrix to show patterns of word usage by the parties on Twitter and interpret it informed by our netnography. 
+
+When working netnographically, the notion of exploring a field takes on new meaning as the data emerging from online platforms can be dispersed on multiple sites and is generally different from data obtained through the embodied participation characterising ethnography (Kozinets, 2019). Kozinets (2019) therefore renames it a data site in digital contexts. We see this as connected to what Munk (2019) calls the meaning problem. The meaning problem concerns how to extract meaning from data, when the data is not contextualised by the actors it regards, which stems from the digital dissolving materialised fields and thus detaching data from the people it concerns (Ibid.). This requires the researcher to situate the data, or as Munk argues; supply numbers with stories, which he deems essential for addressing the meaning problem (Ibid.). 
+
+The challenge of the meaning problem becomes prevalent in our network analysis. While our networks of the parties’ following- and retweet behaviour provide useful insights into how the parties are connected, we risk making claims about the parties being loosely or tightly linked to other actors without being able to check whether this aligns with their own perception (Munk 2019). With our netnographic insights at hand, we are however better suited to assess meaningful connections when interpreting the networks. 
+
+In ASDS 2, we use an LDA topic model to explore topical distributions within our Twitter dataset in combination with qualitatively guided interpretation of how the parties tweet about CSI. Topic modelling entails looking at words as single entities, while our qualitative reading facilitates drawing meaning from combinations of words. Thes two approaches to analysing text data contribute to our project in very different manners. One enables us to account for patterns based on a large amount of data, while the other enables us to look for meaning and qualitatively ground our analysis. 
+
+The multifaceted methodological approaches allow us to discover a generational divide despite vast differences in Twitter activity between the parties, partially due to the youth parties showing a general preference for using Instagram and to some extent Facebook. Thus, a potential further investigation would ideally entail bringing in text and image data from Facebook and Instagram. 
 
 
 # 9. Conclusion 
 
-Through netnographic observations, we discover that it is common for youth- as well as mother parties to present CSI as a topic that is more salient to the younger generation. This is supported by our automated retweet network, where youth parties generally retweet more climate actors than the mother-parties. We observe a skewed following behaviour, where youth parties orientate themselves more towards the mother parties on Twitter, while mother parties follow youth parties on Instagram. Furthermore, we find that mother parties’ word usage is reflected in the divide between the bloc supporting the government and the opposition. The supporting parties post more frequently about CSI to Twitter, notwithstanding Socialdemokratiet which post less about climate to the platform than the other parties in the bloc. This division between the supporting- and opposition blocs is generally reflected amongst the youth parties too, while youth parties post more about CSI to Instagram. Lastly, our LDA topic model shows that CSI is detectable as a prevalent topic within our corpus of tweets, while differences is prevalence follow the findings from the other applied methods. Ultimately, we find evidence of a generational divide, where CSI is broadly communicated as a generational issue more salient to the younger generation, as well as evidence that the youth- and mother parties belonging to the supporting bloc, except Socialdemokratiet, post the most about CSI to social media.  
+Through netnographic observations, we discover that it is common for youth- as well as mother parties to present CSI as a topic that is more salient to the younger generation. This is supported by our automated retweet network, where youth parties generally retweet more climate actors than the mother-parties. We observe a skewed following behaviour, where youth parties orientate themselves more towards the mother parties on Twitter, while mother parties follow youth parties on Instagram. Furthermore, we find that mother parties’ word usage is reflected in the divide between the bloc supporting the government and the opposition. The supporting parties post more frequently about CSI to Twitter, notwithstanding Socialdemokratiet which post less about climate to the platform than the other parties in the bloc. This division between the supporting- and opposition blocs is generally reflected amongst the youth parties too, while youth parties post more about CSI to Instagram. Lastly, our LDA topic model shows that CSI is detectable as a prevalent topic within our corpus of tweets, while differences in prevalence follow the findings from the other applied methods. Ultimately, we find evidence of a generational divide, where CSI is broadly communicated as a generational issue more salient to the younger generation, as well as evidence that the youth- and mother parties belonging to the supporting bloc, except Socialdemokratiet, post the most about CSI to social media.  
 
 
 # Literature
