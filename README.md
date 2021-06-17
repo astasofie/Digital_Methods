@@ -186,9 +186,9 @@ PCA as a method has shortcomings that we take into consideration prior to diving
 # 7. ASDS II - LDA Topic Model
 To uncover if and how youth- and mother parties tweet about climate- and sustainability issues (hereafter CSI), we employ a topic model to discover latent topics within our Twitter dataset. We pose two questions that we seek to answer exploratively through the applied method. 
 
-⋅⋅⋅ 1) Can we identify a topic on CSI in the parties’ tweets? If yes, which parties tweet about this topic? 
+⋅⋅⋅1) Can we identify a topic on CSI in the parties’ tweets? If yes, which parties tweet about this topic? 
 
-⋅⋅⋅ 2) How do parties tweet about CSI over time, and are there differences across the generational divide? 
+⋅⋅⋅2) How do parties tweet about CSI over time, and are there differences across the generational divide? 
 
 We use a Latent Dirichlet Allocation (LDA) topic model, which is an unsupervised machine learning model that uses a bag of words approach to identify latent topic information in large corpora of text (Hong & Davidson, 2010). 
 
@@ -233,6 +233,7 @@ Drawing on our qualitative readings of the Twitter timelines, we use the first l
 We employ an LDA topic model to exploratively examine our Twitter dataset and get an understanding of the youth- and mother parties’ word usage related to CSI. When validating our model, we draw inspiration from Atteveldt et al. (2021), who recommend qualitatively examining the top words within each topic as well as top documents within each topic. From inspecting and labelling the 26 topics we identify topic 14 and topic 17 as being related to CSI (Appendix Topics). 
 
 We compute the gamma, meaning the proportion of each document that is made up of words from the assigned topics. Each document is given a gamma for each of the 26 topics, which sum to a total of 1.0. When qualitatively inspecting the 10 tweets with the highest gamma for topic 14 and 17 respectively, we find all of them to be climate and sustainability related, which suggests that we successfully identified topics on CSI through our LDA model. Tweets with a high coherence score on topic 14 seem to concern specific negotiations between parties, reaching well-defined goals and criticising specific private companies. Meanwhile, topic 17 tweets are about parties communicating their visions for green transition and a more sustainable future. 
+
 
 To further inspect whether topic 14 and 17 can be said to concern CSI, we create a subset for each topic including all tweets that have a gamma higher than 0.5 for topic 14 and topic 17 respectively. We inspect the tweets with the lowest gamma for each of these subsets and qualitatively assess that these tweets also (at least partially) concern CSI. We thus define all tweets with a gamma over 0.5 on either topic 14 or topic 17 to concern CSI, which enables us to infer how present CSI is in our Twitter dataset as well as which parties tweet the most about CSI. 
 
