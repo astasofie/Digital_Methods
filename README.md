@@ -222,7 +222,6 @@ Choosing the number of topics for an LDA model is a non-trivial task that depend
 |:---:|
 | **Figure 5:** Number of topics for non-aggregated data |
 
-![Figure7](https://user-images.githubusercontent.com/83070511/122309218-31fba800-cf0e-11eb-936e-5383575659a9.jpg)
 Drawing on our qualitative readings of the Twitter timelines, we use the first local maximum of 38 topics as the maximum number of topics, since we argue that we will not be able to identify more meaningful topics within our relatively small corpus. We run models with 10, 26, 30 and 38 topics to find the best number topics. Guided by Azad (2020) and our own experimenting, we set the number of passes to 25 and iterations to 500 to balance training the model sufficiently while staying within the scope of what is computationally possible. We set the minimum probability to 0.0 to ensure that all topics are represented with a value in each tweet. We inspect the coherence scores (Figure 6), the top 10 words for the topics in each of the four models and their placement in a visualisation through pyLDAvis (Appendix HTML1). Here, we find that the model with 26 topics performs the best with a coherence score of 0.35. 
 
 | ![Figure6](https://user-images.githubusercontent.com/83070511/122304376-674fc800-cf05-11eb-8af6-0cb2b1dbc272.jpg) |
