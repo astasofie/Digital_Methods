@@ -293,7 +293,7 @@ We label the topics by inspecting the top words and visualise the topics with py
 
 |![Figure8](https://user-images.githubusercontent.com/83070511/122309286-50fa3a00-cf0e-11eb-830d-400ec8c76def.jpg)|
 |:---:|
-|**Figure 8:** topic 0 |
+|**Figure 8:** topic 1 |
 
 Amongst the youth parties, topic 1 seems prevalent during election year 2019. Meanwhile, we observe an increase in youth parties’ tweets belonging to topic 0 posted since the summer of 2020. However, we experience sporadic posting-activity on Twitter by the youth parties, compared to their mother party counterparts as well as big differences in number of tweets from each grouping, which could explain some of the inconsistency. 
 
