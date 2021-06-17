@@ -1,7 +1,5 @@
 # Digital_Methods
 
-# Table of Content
-https://github.com/astasofie/Digital_Methods/blob/main/README.md#1-introduction
 
 # 1. Introduction #
 
@@ -186,22 +184,173 @@ We find that combining the inspection of the PCA plot with the netnographic obse
 PCA as a method has shortcomings that we take into consideration prior to diving into the qualitative assessment of the model. As PCA performs dimensionality reduction, a shortcoming of employing it is that it only explains some of the variance, and that we are only able to see a fraction of the words in our corpus (Abdi, 2019). Therefore, we must critically assess the output bearing our qualitative insights in mind (Blok et al., 2021). We thus experience challenges in interpreting the specific placements of the parties in its socio-symbolic space. These placements are especially ambiguous for the parties that do not post to Twitter about CSI very often, as these are not very represented in the data. 
 
 # 7. ASDS II - LDA Topic Model
+To uncover if and how youth- and mother parties tweet about climate- and sustainability issues (hereafter CSI), we employ a topic model to discover latent topics within our Twitter dataset. We pose two questions that we seek to answer exploratively through the applied method. 
 
-| ![Figure5](https://user-images.githubusercontent.com/83070511/122304023-d11ba200-cf04-11eb-845b-32d77c3d498d.jpg) |
-|:---:|
-| **Figure 5:** Number of topics for non-aggregated data |
+⋅⋅⋅ 1) Can we identify a topic on CSI in the parties’ tweets? If yes, which parties tweet about this topic? 
 
-| ![Figure6](https://user-images.githubusercontent.com/83070511/122304376-674fc800-cf05-11eb-8af6-0cb2b1dbc272.jpg) |
-|:---:|
-| **Figure 6:** Testing models |
+⋅⋅⋅ 2) How do parties tweet about CSI over time, and are there differences across the generational divide? 
+
+We use a Latent Dirichlet Allocation (LDA) topic model, which is an unsupervised machine learning model that uses a bag of words approach to identify latent topic information in large corpora of text (Hong & Davidson, 2010). 
+
+LDA is a generative model, meaning that LDA assumes that a document is written by first deciding on a topic distribution and then randomly choose each word in the document based on its weight within the topic and the topics distribution within the document (Atteveldt et al., 2021). Furthermore, LDA works with the assumption that written documents are about several topics at the same time, meaning that a collection of documents will contain the same topics but in different proportions (Blei, 2012). Despite the generative assumptions about how documents are written, an LDA topic model can be used as an effective way to explore which topics are present and how present they are across specific documents. LDA is a probalistic topic model that takes the observed variables (words) and hidden variables (topic structures) and calculates a joint distribution of the two (Blei, 2012; Terman, 2017). When applying LDA on our documents of tweets, the model iterates through each document and identifies the probability distribution over a predefined number of topics. These topics are represented as a probability function over words (Hong & Davidson, 2010). 
+
+## Twitter data 
+
+When performing a content analysis on Twitter, there are some challenges posed by the nature of the text, the most significant being text length. Since tweets are limited to 280 characters, each document is by default shorter than traditional documents such as newspaper articles (Hong & Davidson, 2010). A general point concerning LDA topic models is that the model searches for a predefined number of topics that is manually decided by the researcher. This means that the researcher is also qualitatively assessing when the model is successfully identifying distinguishable topics. 
+
+We follow the findings of Hong and Davidson (2010) who conducted an experiment to find the best approach to constructing a topic model on Twitter data. Their study compared the performance of topic models on distinctive designs. The most relevant to mention here are the message (or tweet) scheme and the user scheme, the first taking each tweet as an individual, short document, the latter taking tweets aggregated per each user as documents (Ibid.). The user scheme had fewer, but longer documents, resulting in fewer, but more accurate topic distributions. According to the experiment by Hong and Davidson (2010), this approach resulted in the best performing LDA topic model. 
+
+## Preprocessing for LDA 
+
+We employ an LDA topic model with the python library gensim. Our data consists of tweets from the timelines of the Twitter profiles of nine mother parties and 10 youth parties. The LDA is employed on two different version of our data. First, we treat all tweets as unique documents. Thereafter, we aggregate tweets on party and week level. 
+
+LDA is a text-based method that converts words into numbers and requires preprocessing to simplify the text data given to the model without severely diminishing the interpretability and possible conclusions (Denny & Spirling, 2018). We draw on the preprocessing by Terman (2017) while adapting the steps to our analysis. This resulted in the following preprocessing steps: lowercasing, replacing instances of ‘&’ with ‘og’ (and), removing punctuation, odd special characters, and additional whitespaces. We remove URLs, words with less than three characters, emojis and #dkpol, as our initial attempt to include emojis and all hashtags resulted in uninterpretable topics and poorly performing models despite alterations in number of topics, passes and iterations. We keep all other hashtags and mentions to be able to identify whether specific hashtags or Twitter users are prevalent within any topics. Numbers are kept as our netnographic inquiry showed that numbers such as 2030 are often used to discuss CSI. 
+
+After tokenising all tweets and removing stop words on the nltk stop words list in Danish and English, we stem using the nltk Snowball stemmer in Danish. Tweets that lose their meaning after preprocessing, such as a tweet only consisting of an emoji or a URL, are removed. Our analysis focuses on the timeframe from the beginning of 2019 until the time of our API search (June 3, 2021), resulting in a dataset consisting of 22,641 tweets. The distribution of tweets between parties is illustrated in Table 2. 
 
 | <img width="359" alt="Tabel 2" src="https://user-images.githubusercontent.com/83070511/122304872-391eb800-cf06-11eb-965f-9cfacf3376a0.png"> |
 |:---:|
 | **Table 2:** Tweet distribution |
 
+We create uni- and bigrams, tokenise and get an id2word dictionary of 250,630 words. We filter away frequently and infrequently used words, resulting in a list of 11,150 words and use doc2bow to create a corpus object consisting of all document tokens. 
+
+## Number of topics 
+
+Choosing the number of topics for an LDA model is a non-trivial task that depends on the type of documents and the aim of the study (Roberts, 2014). To identify the optimal number of topics we focus on the coherence score as a measure of how well the model performs as done by Azad (2020). We compute the coherence score for different numbers of topics ranging from 2 up to 200 topics with steps of 6, as illustrated in Figure 5. 
+
+| ![Figure5](https://user-images.githubusercontent.com/83070511/122304023-d11ba200-cf04-11eb-845b-32d77c3d498d.jpg) |
+|:---:|
+| **Figure 5:** Number of topics for non-aggregated data |
+
+![Figure7](https://user-images.githubusercontent.com/83070511/122309218-31fba800-cf0e-11eb-936e-5383575659a9.jpg)
+Drawing on our qualitative readings of the Twitter timelines, we use the first local maximum of 38 topics as the maximum number of topics, since we argue that we will not be able to identify more meaningful topics within our relatively small corpus. We run models with 10, 26, 30 and 38 topics to find the best number topics. Guided by Azad (2020) and our own experimenting, we set the number of passes to 25 and iterations to 500 to balance training the model sufficiently while staying within the scope of what is computationally possible. We set the minimum probability to 0.0 to ensure that all topics are represented with a value in each tweet. We inspect the coherence scores (Figure 6), the top 10 words for the topics in each of the four models and their placement in a visualisation through pyLDAvis (Appendix HTML1). Here, we find that the model with 26 topics performs the best with a coherence score of 0.35. 
+
+| ![Figure6](https://user-images.githubusercontent.com/83070511/122304376-674fc800-cf05-11eb-8af6-0cb2b1dbc272.jpg) |
+|:---:|
+| **Figure 6:** Testing models |
+
+## Analysis 
+
+We employ an LDA topic model to exploratively examine our Twitter dataset and get an understanding of the youth- and mother parties’ word usage related to CSI. When validating our model, we draw inspiration from Atteveldt et al. (2021), who recommend qualitatively examining the top words within each topic as well as top documents within each topic. From inspecting and labelling the 26 topics we identify topic 14 and topic 17 as being related to CSI (Appendix Topics). 
+
+We compute the gamma, meaning the proportion of each document that is made up of words from the assigned topics. Each document is given a gamma for each of the 26 topics, which sum to a total of 1.0. When qualitatively inspecting the 10 tweets with the highest gamma for topic 14 and 17 respectively, we find all of them to be climate and sustainability related, which suggests that we successfully identified topics on CSI through our LDA model. Tweets with a high coherence score on topic 14 seem to concern specific negotiations between parties, reaching well-defined goals and criticising specific private companies. Meanwhile, topic 17 tweets are about parties communicating their visions for green transition and a more sustainable future. 
+
+To further inspect whether topic 14 and 17 can be said to concern CSI, we create a subset for each topic including all tweets that have a gamma higher than 0.5 for topic 14 and topic 17 respectively. We inspect the tweets with the lowest gamma for each of these subsets and qualitatively assess that these tweets also (at least partially) concern CSI. We thus define all tweets with a gamma over 0.5 on either topic 14 or topic 17 to concern CSI, which enables us to infer how present CSI is in our Twitter dataset as well as which parties tweet the most about CSI. 
+
+|<img width="550" alt="Table 3" src="https://user-images.githubusercontent.com/83070511/122309639-ee556e00-cf0e-11eb-992b-682ae3607a39.png">|
+|:---:|
+|**Table 3:** Total number of tweets with gamme >0.5 in topic 14 or 17 per party|
+
+Table 3 shows large variation in how much parties tweet about CSI. For example, our inspection suggests that 10.4% of Alternativet’s tweets are primarily about CSI, while this is only the case for 0.5% of the tweets by DF. The bloc supporting the government tweets significantly more about climate than the opposition parties, where the highest percentage is Konservative (3,6%). Amongst the parties supporting the government, Radikale, SF as well as Enhedslisten, however, tweet more about climate than Socialdemokratiet. We find a similar divide amongst the youth parties, while LAU has a high percentage of climate tweets compared to its mother party. 
+
+When looking at the generational divide between youth- and mother parties, we see that the topics on CSI are slightly more prevalent amongst the youth parties. Importantly, there is great variance in the number of tweets posted by each party and our exploration shows a large gap in how much mother- and youth parties tweet, with the latter only having posted 10.7 % of the total number of tweets in our dataset. Consequently, we do not seek to draw any conclusions solely from these results but rather see them in combination with the other methods employed in this study. 
+
+## Aggregated data 
+
+While we find the LDA model to perform well on documents consisting of only single tweets, we want to explore if aggregating the tweets into larger documents will cause the model to perform better and produce more interpretable topic distributions, as suggested by Hong and Davidson (2010). Inspired by Barberá et al. (2019), we aggregate tweets on party and week level, meaning that one document consists of all tweets by a party during a certain week. Based on the function that computes the coherence scores for different numbers of topics, we decide on a model with 10 topics, 25 passes and 500 iterations, which achieves a coherence score of 0.74. 
+
+We label the topics by inspecting the top words and visualise the topics with pyLDAvis (Appendix HTML2). We interpret topic 0 and topic 1 to be CSI-related although discriminating between the themes of the topics is less straightforward compared to the topics identified with non-aggregated tweets even though this topic model gives a notably higher coherence score. When sorting the aggregated tweets based on their gammas, we find topic 0 to be highly dominated by Enhedslisten while topic 1 is highly dominated by Alternativet and Alternativets Unge. This could suggest that these parties are frequently and continuously tweeting about CSI. To achieve an understanding of the generational aspects of the temporal development in tweets belonging to either of these topics, we group mother- and youth parties separately. Then we plot the development of topic 0 (Figure 7) and topic 1 (Figure 8) over time. 
+
+|![Figure7](https://user-images.githubusercontent.com/83070511/122309279-4dff4980-cf0e-11eb-943d-67b675d8b91f.jpg)|
+|:---:|
+|**Figure 7:** topic 0 |
+
+|![Figure8](https://user-images.githubusercontent.com/83070511/122309286-50fa3a00-cf0e-11eb-830d-400ec8c76def.jpg)|
+|:---:|
+|**Figure 8:** topic 0 |
+
+Amongst the youth parties, topic 1 seems prevalent during election year 2019. Meanwhile, we observe an increase in youth parties’ tweets belonging to topic 0 posted since the summer of 2020. However, we experience sporadic posting-activity on Twitter by the youth parties, compared to their mother party counterparts as well as big differences in number of tweets from each grouping, which could explain some of the inconsistency. 
+
+We experience that LDA has shortcomings in relation to the interpretability of the topics as well as all the subjective choices needed regarding number of topics, iterations and passes and defining the meaning of each topic. This is especially prevalent in the aggregated data, which could be caused by the mere fact that we as researchers combine individual tweets that were never intended to be coherent documents. Nevertheless, LDA allows us to explore our data in new ways and identify latent patterns in how words appear in relation to each other. 
+
+## Alternative method 
+
+An alternative approach to examining the parties’ engagement in CSI on Twitter would be employing a sentiment analysis, for example on a subset of tweets concerning CSI. Sentiment analysis is commonly used to analyse political content. For example, in a study by Young and Soroka (2012), they create a dictionary that prove to perform well on manually coded newspaper content from previous electoral campaigns in Canada. Additionally, Brie and Dufresne (2018) employ a sentiment analysis to analyse tweet sentiment in tweets from official campaign organisations during the 2014 Scottish independence referendum. 
+
+For our study, we could employ the module SENTIDA, which consists of just about 10.000 lemmas in the Danish language (Lauridsen et al., 2019). This would allow us to gauge if there are general differences in sentiment in the way each party tweet about CSI as well as determine if there are differences between youth- and mother parties in terms of positivity and negativity as well as in the intensity and polarisation of sentiment scores. 
+
+There are technical challenges to automated sentiment analyses in smaller languages such as Danish. Firstly, SENTIDA requires lemmatisation, which is not unproblematic in the Danish language, as words tend to change in the process. For instance, in our experience, nej, meaning no, was lemmatised to neje, meaning curtsy. Furthermore, the use of negations to encourage agreement or to pose a question is simply accepted as a negation, and thus changes the sentiment of the entire sentence (Lauridsen et al., 2019). Accordingly, we deem that the LDA topic model would provide us with more useful insights and be a better approach to answering our research question. 
 
 
 
+
+# 9. Conclusion 
+
+Through netnographic observations, we discover that it is common for youth- as well as mother parties to present CSI as a topic that is more salient to the younger generation. This is supported by our automated retweet network, where youth parties generally retweet more climate actors than the mother-parties. We observe a skewed following behaviour, where youth parties orientate themselves more towards the mother parties on Twitter, while mother parties follow youth parties on Instagram. Furthermore, we find that mother parties’ word usage is reflected in the divide between the bloc supporting the government and the opposition. The supporting parties post more frequently about CSI to Twitter, notwithstanding Socialdemokratiet which post less about climate to the platform than the other parties in the bloc. This division between the supporting- and opposition blocs is generally reflected amongst the youth parties too, while youth parties post more about CSI to Instagram. Lastly, our LDA topic model shows that CSI is detectable as a prevalent topic within our corpus of tweets, while differences is prevalence follow the findings from the other applied methods. Ultimately, we find evidence of a generational divide, where CSI is broadly communicated as a generational issue more salient to the younger generation, as well as evidence that the youth- and mother parties belonging to the supporting bloc, except Socialdemokratiet, post the most about CSI to social media.  
+
+
+# Literature
+## Literature ASDS2 
+
+van Atteveldt, W., Trilling, D. & Arcila, C. (2021). Computational Analysis of Communication: A practical introduction to the analysis of texts, networks, and images with code examples in Python and R. cssbook.net 
+
+Azad, A. (2020, July 13). *Twitter Topic Modeling - Towards Data Science.* Towards Data Science. Retrieved June 16, 2021 https://towardsdatascience.com/twitter-topic-modeling-e0e3315b12e2 
+
+Barberá, P., Casas, A., Nagler, J., Egan, P. J., Bonneau, R., Jost, J. T., & Tucker, J. A. (2019). Who leads? Who follows? Measuring issue attention and agenda setting by legislators and the mass public using social media data. American Political Science Review, 113(4), 883-901. 
+
+Blei, D. M. (2012). Probabilistic topic models. *Communications of the ACM*, 55(4), 77-84. 
+
+Brie, E., & Dufresne, Y. (2018). Tones from a Narrowing Race: Polling and Online Political Communication during the 2014 Scottish Referendum Campaign. British Journal of Political Science, 50(2), 497–509. https://doi.org/10.1017/s0007123417000606 
+
+Hong, L., & Davison, B. D. (2010, July). Empirical study of topic modeling in twitter. In *Proceedings of the first workshop on social media analytics*. 80-88. 
+     
+Denny, M. J., & Spirling, A. (2018). Text preprocessing for unsupervised learning: Why it matters, when it misleads, and what to do about it. Political Analysis, 26(2), 168-189. 
+     
+Lauridsen, G. A., Dalsgaard, J. A., & Svendsen, L. K. B. (2019). SENTIDA: A New Tool for Sentiment Analysis in Danish. *Journal of Language Works-Sprogvidenskabeligt Studentertidsskrift*, 4(1), 38-53 
+     
+Roberts, M. E., Stewart, B. M., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S. K., Albertson, B., & Rand, D. G. (2014). Structural Topic Models for Open-Ended Survey Responses. *American Journal of Political Science*, 58(4), 1064–1082. https://doi.org/10.1111/ajps.12103 
+     
+Terman, R. (2017). Islamophobia and media portrayals of Muslim women: A computational text analysis of US news coverage. *International Studies Quarterly*, 61(3), 489-502. 
+     
+Young, L., & Soroka, S. (2012). Affective news: The automated coding of sentiment in political texts. *Political Communication,* 29(2), 205-231. 
+
+## Literature DM 
+
+Abdi, H., & Williams, L. J. (2010). Principal component analysis. Wiley interdisciplinary reviews: computational statistics, 2(4), 433-459. 
+     
+Andini, S. (2020). How People Access News about Climate Change. In: E Newman, N., Fletcher, R., Schulz, A., Andi, S., & Nielsen, R. K. (2020). Reuters Institute Digital News Report 2020. *Reuters Institute for Study of Journalism*. 52 – 57. 
+
+Blok, A. et al. (2021). Inter-risk framing contests. *Under review for American Journal of Cultural Sociology* 
+     
+Blok, A. (n.d.). *Digital klima-aktivisme i en skandinavisk corona-tid*. Coronakrisen.Github. Retrieved June 16, 2021, from https://coronakrisen.github.io/post6.html 
+     
+Boyd, D., Golder, S., & Lotan, G. (2010, January). Tweet, tweet, retweet: Conversational aspects of retweeting on twitter. In 2010 43rd Hawaii international conference on system sciences. 1-10. IEEE. 
+     
+Brunton, S. L., & Kutz, J. N. (2019). *Data-driven science and engineering: Machine learning, dynamical systems, and control*. Cambridge University Press. 
+     
+Decuypere, M. (2020). Visual Network Analysis: a qualitative method for researching sociomaterial practice. *Qualitative Research,* 20(1), 73-90. 
+     
+Edwards, A., Housley, W., Williams, M., Sloan, L., & Williams, M. (2013). Digital social research, social media and the sociological imagination: Surrogacy, augmentation and re-orientation. *International Journal of Social Research Methodology*, 16(3), 245-260. 
+     
+Frederiksen. (2020, June 24). *Mette Frederiksens tale på valgnatten 2019*. Danske Taler. https://dansketaler.dk/tale/mette-frederiksens-tale-paa-valgnatten-2019/ 
+     
+Fuhse, J., Stuhler, O., Riebling, J., & Martin, J. L. (2020). Relating social and symbolic relations in quantitative text analysis. A study of parliamentary discourse in the Weimar Republic. *Poetics*, 78, 101363. 
+     
+Hong, L., & Davison, B. D. (2010, July). Empirical study of topic modeling in twitter. In *Proceedings of the first workshop on social media analytics*. 80-88. 
+     
+Kim, J., & Yoo, J. (2012, December). Role of sentiment in message propagation: Reply vs. retweet behavior in political communication. In 2012 *International Conference on Social Informatics* (pp. 131-136). IEEE. 
+     
+Kozinets, R. V. (2019). *Netnography: The essential guide to qualitative social media research*. Sage. 
+     
+MacQueen, K. M., McLellan, E., Kay, K., & Milstein, B. (1998). Codebook development for team-based qualitative analysis. *Cam Journal*, 10(2), 31-36. 
+     
+Marres, N., & Gerlitz, C. (2016). Interface methods: Renegotiating relations between digital social research, STS and sociology. *The Sociological Review,* 64(1), 21-46. 
+     
+Moats, D. (2021). Rethinking the ‘Great Divide’: Approaching Interdisciplinary Collaborations Around Digital Data with Humour and Irony. *Big Data and Society*, 34(1), 19-42. 
+     
+Munk, A. K. (2019). Four styles of quali-quantitative analysis: Making sense of the new Nordic food movement on the web. *Nordicom Review*, 40(s1), 159-176. 
+     
+Newman, N., Fletcher, R., Schulz, A., Andi, S., & Nielsen, R. K. (2020). Reuters Institute Digital News Report 2020. *Reuters Institute for Study of Journalism*. 2020-06. 
+
+Rød-Grøn Ungdom. (n.d.). *Vedtægter*. Retrieved June 16, 2021, from https://www.rgungdom.dk/vedtaegter 
+     
+Socialistisk Ungdomsfront. (n.d.). *Hvem er vi?* Retrieved June 16, 2021, from https://ungdomsfront.dk/hvem-er-vi 
+     
+Sørensen. (2019). *Folketingsvalget 2019*. Danmarkshistoriendk, Aarhus Universitet. Retrieved June 16, 2021, from https://danmarkshistorien.dk/vis/materiale/folketingsvalget-2019-1/ 
+     
+Thew, H., Middlemiss, L., & Paavola, J. (2020). “Youth is not a political position”: exploring justice claims-making in the UN climate change negotiations. *Global Environmental Change*, 61, 102036. 
+     
+Venturini, T., Bounegru, L., Gray, J., & Rogers, R. (2018). A reality check (list) for digital methods. *New media & society*, 20(11), 4195-4217. 
 
 
 
