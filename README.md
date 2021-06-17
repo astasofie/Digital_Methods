@@ -21,7 +21,7 @@
 - [6. Content analysis - 25](#6-content-analysis)
   * [Analysis and key findings - 5](#analysis-and-key-findings-1)
   * [Shortcomings - 26](#shortcomings-1)
-- [7. ASDS II - LDA Topic Model](#7-asds-ii---lda-topic-model)
+- [7. ASDS II - LDA Topic Model - 3](#7-asds-ii---lda-topic-model)
   * [Twitter data - 28](#twitter-data)
   * [Preprocessing for LDA - 4](#preprocessing-for-lda)
   * [Number of topics - 28](#number-of-topics)
@@ -47,8 +47,8 @@ Guided by Kozinets&#39; (2019) writings on netnographically founded research, we
 
 Specifically, we explore how the framing of CSI as a political issue of particular significance to the younger generation(s) is reflected in how youth- and mother parties engage in the conversation on CSI on Twitter. Formally, we ask the question:
 
- ⋅⋅⋅ _How do political parties engage in the conversation on climate- and sustainability related issues on Twitter and can we observe differences across the_
- ⋅⋅⋅_political spectrum and between mother- and youth parties?_
+  
+ _How do political parties engage in the conversation on climate- and sustainability related issues on Twitter and can we observe differences across the political spectrum and between mother- and youth parties?_
 
 # 2. Motivation #
 
@@ -222,9 +222,9 @@ PCA as a method has shortcomings that we take into consideration prior to diving
 # 7. ASDS II - LDA Topic Model
 To uncover if and how youth- and mother parties tweet about climate- and sustainability issues (hereafter CSI), we employ a topic model to discover latent topics within our Twitter dataset. We pose two questions that we seek to answer exploratively through the applied method. 
 
-⋅⋅⋅1) Can we identify a topic on CSI in the parties’ tweets? If yes, which parties tweet about this topic? 
+_1) Can we identify a topic on CSI in the parties’ tweets? If yes, which parties tweet about this topic?_ 
 
-⋅⋅⋅2) How do parties tweet about CSI over time, and are there differences across the generational divide? 
+_2) How do parties tweet about CSI over time, and are there differences across the generational divide?_ 
 
 We use a Latent Dirichlet Allocation (LDA) topic model, which is an unsupervised machine learning model that uses a bag of words approach to identify latent topic information in large corpora of text (Hong & Davidson, 2010). 
 
